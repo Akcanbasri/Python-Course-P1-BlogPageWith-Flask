@@ -1,0 +1,16 @@
+{% extends "layout.html" %} 
+
+{% block body %} 
+{% if article %}
+<h4>{{article[1]}}</h4>
+<hr />
+Author: {{article[2]}}
+<hr>
+Date: {{article[4]}}
+<hr>
+<p>{{article[3]|safe}}</p>
+
+{% else %}
+<div class="alert alert-danger" role="alert">
+  <strong>No article found.</strong>  {% endif %} {% endblock body %}
+</div>
